@@ -11,10 +11,24 @@ dbt --version
 
 ## Connexion
 
-Mettre à jour le fichier `.env` avec les informations de connexions.
+Créer un fichier `.env` avec les variables suivantes:
 
-Pour s'assurer du bon fonctionnement:
+```
+DBT_PROJECT_DIR=<current_directory>
+DBT_PROFILES_DIR=<current_directory>
+DBT_SNOWFLAKE_ACCOUNT=<TBD>
+DBT_SNOWFLAKE_USER=<TBD>
+DBT_SNOWFLAKE_PASSWORD=<TBD>
+DBT_SNOWFLAKE_ROLE=<TBD>
+DBT_SNOWFLAKE_DB=<TBD>
+DBT_SNOWFLAKE_WAREHOUSE=<TBD>
+DBT_SNOWFLAKE_SCHEMA=<TBD>
+
+```
+
+Sourcer ce document & vérifier la connexion:
 
 ```bash
+source .env
 dbt debug
 ```
