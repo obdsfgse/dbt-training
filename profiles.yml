@@ -1,20 +1,20 @@
 config:
   send_anonymous_usage_stats: False
-snowflake:
+dbt_training:
   target: dev
   outputs:
     dev:
       type: snowflake
-      account: {{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}
+      account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}"
 
       # User/password auth
-      user: {{ env_var('DBT_SNOWFLAKE_USER') }}
-      password: {{ env_var('DBT_SNOWFLAKE_PASSWORD') }}
+      user: "{{ env_var('DBT_SNOWFLAKE_USER') }}"
+      password: "{{ env_var('DBT_SNOWFLAKE_PASSWORD') }}"
 
-      role: {{ env_var('DBT_SNOWFLAKE_ROLE') }}
-      database: {{ env_var('DBT_SNOWFLAKE_DB') }}
-      warehouse: {{ env_var('DBT_SNOWFLAKE_WAREHOUSE') }}
-      schema: {{ env_var('DBT_SNOWFLAKE_SCHEMA') }}
+      role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
+      database: "{{ env_var('DBT_SNOWFLAKE_DB') }}"
+      warehouse: "{{ env_var('DBT_SNOWFLAKE_WAREHOUSE') }}"
+      schema: "{{ env_var('DBT_SNOWFLAKE_SCHEMA') }}"
       threads: 1
       client_session_keep_alive: False
 
