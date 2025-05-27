@@ -1,0 +1,3 @@
+data_tests:
+  - name: check_avg_order_neg
+    description: Check that no customer has a negative average revenue

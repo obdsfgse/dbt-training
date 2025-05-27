@@ -1,0 +1,7 @@
+sources:
+  - name: stripe
+    description: Source data from payment management solution
+    database: dbt_raw
+    schema: stripe
+    tables:
+      - name: payment

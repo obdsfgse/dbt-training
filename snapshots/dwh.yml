@@ -1,0 +1,7 @@
+snapshots:
+  - name: dim_customer_histo
+    description: Historized versions of the dim_customer model
+    config:
+      unique_key: id
+      strategy: check
+      check_cols: all

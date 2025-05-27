@@ -1,0 +1,10 @@
+macros:
+  - name: with_ref
+    description: Handle the referencing of external models
+    arguments:
+      - name: model_name
+        type: string
+        description: Name of the source model to reference
+      - name: alias
+        type: string
+        description: (Optional) Name of the alias to use for the imported reference. If none is provided, uses the model_name
