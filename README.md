@@ -30,6 +30,8 @@ DBT_SNOWFLAKE_SCHEMA=<TBD>
 Sourcer ce document & vérifier la connexion:
 
 ```bash
+set -a
 source .env
+set +a
 dbt debug
 ```
