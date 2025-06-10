@@ -4,7 +4,8 @@
 
 ```bash
 python3 -m venv venv
-source ./venv/bin/activate
+source ./venv/bin/activate # WSL
+source ./venv/Scripts/activate # Git Bash
 pip install -r requirements.txt
 dbt --version
 ```
