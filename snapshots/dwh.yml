@@ -1,5 +1,6 @@
 snapshots:
   - name: dim_customer_histo
+    relation: ref('dim_customer')
     description: Historized versions of the dim_customer model
     config:
       unique_key: id
