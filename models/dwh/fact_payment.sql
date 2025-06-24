@@ -15,10 +15,11 @@ select
     , _orders.order_date
     , _payments.amount
     , _payments.status in ('returned', 'return pending') as is_returned
+    , current_timestamp() as load_date
 from
     _payments
     join _orders on _orders.id = _payments.order_id
 {% if is_incremental() %}
 where
-    _batched_at >= (select coalesce(max(order_date),'1900-01-01') from {{ this }} )
+    _batched_at >= (select coalesce(max(load_date),'1900-01-01') from {{ this }} )
 {% endif %}
