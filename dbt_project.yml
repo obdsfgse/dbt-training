@@ -1,11 +1,11 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'dbt_training'
-version: '1.0.0'
+name: "dbt_training"
+version: "1.0.0"
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'dbt_training'
+profile: "dbt_training"
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -20,10 +20,9 @@ snapshot-paths: ["snapshots"]
 flags:
   send_anonymous_usage_stats: false
 
-clean-targets:         # directories to be removed by `dbt clean`
+clean-targets: # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
-
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
