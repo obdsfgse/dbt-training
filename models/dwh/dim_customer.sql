@@ -12,8 +12,11 @@ nb_orders as (
 )
 
 select
-    _customers.*,
-    nb_orders.number_of_orders
+    _customers.id
+    , _customers.first_name
+    , _customers.last_name
+    , _customers.full_name
+    , nb_orders.number_of_orders
 from
     _customers
 left join nb_orders
